@@ -22,7 +22,7 @@ export default function Testimonials() {
       </div>
       <div className="flex flex-1 gap-x-8 snap-x overflow-x-auto py-16">
         {testimonials.map((testimonial) => (
-          <div key={testimonial} className="snap-start shrink-0 border rounded-md p-4">
+          <div key={testimonial} className="snap-start shrink-0 max-w-full border rounded-md p-4">
             <img
               className="rounded-md"
               src={testimonial}
