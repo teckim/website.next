@@ -34,7 +34,7 @@ export default function Home() {
             project={currentProject}
           />
         )}
-        <section id="testimonials">
+        <section id="testimonials" className="py-24">
           <Testimonials />
         </section>
         <section
