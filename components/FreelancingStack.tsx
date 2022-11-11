@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { contactLinkClickEvent } from "../modules/ga";
 
 export default function FreelancingStack() {
   return (
@@ -9,6 +10,7 @@ export default function FreelancingStack() {
           href="https://www.fiverr.com/hakim_bhd"
           target="_blank"
           className="w-full h-12 flex items-center justify-center md:w-auto px-6 hover:shadow-md bg-gradient-to-r from-slate-100/90 to-slate-100/40 backdrop-blur-sm rounded-md"
+          onClick={() => contactLinkClickEvent("fiverr")}
         >
           <Image
             src="/images/fiverr.png"
@@ -21,6 +23,7 @@ export default function FreelancingStack() {
           href="https://www.upwork.com/freelancers/~011015179d488fba6a"
           target="_blank"
           className="w-full h-12 flex items-center justify-center md:w-auto px-6 hover:shadow-md bg-gradient-to-r from-slate-100/90 to-slate-100/40 backdrop-blur-sm rounded-md"
+          onClick={() => contactLinkClickEvent("upwork")}
         >
           <Image
             src="/images/upwork.png"

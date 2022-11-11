@@ -3,6 +3,7 @@ import DownloadIcon from "../assets/icons/download.svg";
 import EmailIcon from "../assets/icons/email.svg";
 import Link from "next/link";
 import FreelancingStack from "./FreelancingStack";
+import { contactLinkClickEvent } from "../modules/ga";
 
 export default function About() {
   return (
@@ -23,6 +24,7 @@ export default function About() {
             href="/resume.pdf"
             target="_blank"
             className="w-full flex items-center justify-center gap-x-4 md:w-auto px-6 py-2 text-primary-600 hover:text-white bg-white hover:bg-primary-600 border border-primary-600 hover:shadow-md rounded-md font-medium capitalize"
+            onClick={() => contactLinkClickEvent('resume_download')}
           >
             <DownloadIcon />
             <span>Get my resume</span>
@@ -31,6 +33,7 @@ export default function About() {
             href="/resume.pdf"
             target="_blank"
             className="w-full flex items-center justify-center gap-x-4 md:w-auto px-6 py-2 text-primary-600 hover:text-white bg-white hover:bg-primary-600 border border-primary-600 hover:shadow-md rounded-md font-medium capitalize"
+            onClick={() => contactLinkClickEvent('email_me')}
           >
             <EmailIcon />
             <span>Email me</span>

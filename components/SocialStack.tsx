@@ -3,33 +3,32 @@ import LinkedinIcon from "../assets/icons/linkedin.svg";
 import MediumIcon from "../assets/icons/medium.svg";
 import GithubIcon from "../assets/icons/github.svg";
 import AngelListIcon from "../assets/icons/angel-list.svg";
-import UpworkIcon from "../assets/icons/upwork.svg";
-import FiverrIcon from "../assets/icons/fiverr.svg";
 import Link from "next/link";
+import { contactLinkClickEvent } from "../modules/ga";
 
 const socialAcounts = [
   {
-    name: "Twitter",
+    name: "twitter",
     icon: <TwitterIcon />,
     link: "https://twitter.com/hakim_bhd",
   },
   {
-    name: "Linkedin",
+    name: "linkedin",
     icon: <LinkedinIcon />,
     link: "https://www.linkedin.com/in/hakim-bhd/",
   },
   {
-    name: "Medium",
+    name: "medium",
     icon: <MediumIcon />,
     link: "https://medium.com/@hakim.bhd",
   },
   {
-    name: "Github",
+    name: "github",
     icon: <GithubIcon />,
     link: "https://github.com/teckim",
   },
   {
-    name: "AngelList",
+    name: "angel-list",
     icon: <AngelListIcon />,
     link: "https://angel.co/u/hakim-bhd",
   },
@@ -40,7 +39,7 @@ export default function SocialStack() {
     <ul className="flex items-center gap-x-4">
       {socialAcounts.map((account) => (
         <li key={account.name}>
-          <Link href={account.link} target="_blank">{account.icon}</Link>
+          <Link href={account.link} target="_blank" onClick={() => contactLinkClickEvent(account.name)}>{account.icon}</Link>
         </li>
       ))}
     </ul>

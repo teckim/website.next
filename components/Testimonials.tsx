@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import Image from "next/image";
+import { scrollEvent } from "../modules/ga";
 
 const testimonials = [
   "/images/testimonial-2.png",
@@ -12,6 +12,12 @@ const testimonials = [
 ];
 
 export default function Testimonials() {
+  let tracked = false;
+  const handleScroll = () => {
+    if (tracked) return;
+    tracked = true
+    scrollEvent();
+  }
   return (
     <div className="container">
       <div className="text-center mt-16">
@@ -20,7 +26,7 @@ export default function Testimonials() {
         </h2>
         <p className="text-slate-600 text-sm">In Upwork and Fiverr</p>
       </div>
-      <div className="flex flex-1 gap-x-8 snap-x overflow-x-auto py-16">
+      <div className="flex flex-1 gap-x-8 snap-x overflow-x-auto py-16" onScroll={handleScroll} >
         {testimonials.map((testimonial) => (
           <div key={testimonial} className="snap-start shrink-0 max-w-full border rounded-md p-4">
             <img

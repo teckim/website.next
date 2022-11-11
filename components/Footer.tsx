@@ -1,4 +1,5 @@
 import SendIcon from "../assets/icons/send.svg";
+import { submitEvent } from "../modules/ga";
 
 export default function Footer() {
   return (
@@ -47,6 +48,7 @@ export default function Footer() {
             <button
               className="w-full flex items-center justify-center gap-4 md:w-auto px-6 py-2 mt-2 text-primary-600 hover:text-white bg-white hover:bg-primary-600 border border-primary-600 rounded-md"
               type="submit"
+              onClick={() => submitEvent('contact_form')}
             >
               <SendIcon className="h-5 w-5" />
               <span>Send</span>
