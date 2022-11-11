@@ -6,6 +6,18 @@ export function contactLinkClickEvent (type: string) {
   })
 }
 
+export function projectClickEvent (type?: string) {
+  event('project_click', {
+    type
+  })
+}
+
+export function projectLinkClickEvent (link?: string) {
+  event('project_link_click', {
+    link
+  })
+}
+
 export function submitEvent (type: string) {
   event('submit_click', {
     type

@@ -43,22 +43,29 @@ export default function Home() {
         >
           <div className="container">
             <div className="text-center my-16">
-              <h2 className="text-3xl font-semibold text-primary-500">Projects</h2>
+              <h2 className="text-3xl font-semibold text-primary-500">
+                Projects
+              </h2>
             </div>
-            {projects.map((project, idx) => (
-              <ProjectCard
-                key={project.title}
-                project={project}
-                onClick={() => showProjectModal(idx)}
-              />
-            ))}
+            <div className="flex flex-col gap-y-8">
+              {projects.map((project, idx) => (
+                <ProjectCard
+                  key={project.title}
+                  project={project}
+                  onClick={() => showProjectModal(idx)}
+                />
+              ))}
+            </div>
           </div>
         </section>
         <section id="about" className="container py-24">
           <About />
         </section>
       </main>
-      <footer id="contact" className="bg-primary-500 bg-footer-mobile md:bg-footer-desktop bg-no-repeat">
+      <footer
+        id="contact"
+        className="bg-primary-500 bg-footer-mobile md:bg-footer-desktop bg-no-repeat"
+      >
         <Footer />
       </footer>
     </>

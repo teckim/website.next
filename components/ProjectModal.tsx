@@ -4,6 +4,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import CloseIcon from "../assets/icons/close-black.svg";
 import { IProject } from "../data/projects";
 import Features from "./Features";
+import { projectLinkClickEvent } from "../modules/ga";
 
 interface MobileMenuProps {
   isOpen: boolean;
@@ -80,6 +81,7 @@ export default function ProjectModal({
                       href={project.links.live}
                       target="_blank"
                       rel="noreferrer"
+                      onClick={() => projectLinkClickEvent(project?.links?.live)}
                     >
                       See live
                     </a>
@@ -90,6 +92,7 @@ export default function ProjectModal({
                       href={project.links.source}
                       target="_blank"
                       rel="noreferrer"
+                      onClick={() => projectLinkClickEvent(project?.links?.source)}
                     >
                       See source
                     </a>
