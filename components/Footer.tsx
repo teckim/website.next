@@ -20,7 +20,7 @@ export default function Footer() {
             method="post"
           >
             <input
-              className="h-12 my-2 p-2 rounded-md"
+              className="h-12 my-2 p-2 rounded-md bg-white"
               type="text"
               placeholder="Your name"
               name="name"
@@ -29,14 +29,14 @@ export default function Footer() {
             />
             <input
               id="email"
-              className="h-12 my-2 p-2 rounded-md"
+              className="h-12 my-2 p-2 rounded-md bg-white"
               type="email"
               placeholder="Your email"
               name="email"
               required
             />
             <textarea
-              className="my-2 p-2 rounded-md"
+              className="my-2 p-2 rounded-md bg-white"
               placeholder="Write your message here"
               maxLength={500}
               rows={5}

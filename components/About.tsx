@@ -6,7 +6,7 @@ import FreelancingStack from "./FreelancingStack";
 
 export default function About() {
   return (
-    <div className="grid md:grid-cols-2">
+    <div className="grid md:grid-cols-2 gap-16">
       <div className="flex flex-col gap-y-4">
         <h1 className="text-4xl text-slate-700 font-semibold">
           About <br />

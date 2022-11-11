@@ -26,7 +26,7 @@ export default function Home() {
         <Navbar />
         <Hero />
       </header>
-      <main>
+      <main className="bg-white">
         {currentProject && (
           <ProjectModal
             onclose={hideProjectModal}
