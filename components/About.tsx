@@ -30,8 +30,7 @@ export default function About() {
             <span>Get my resume</span>
           </Link>
           <Link
-            href="/resume.pdf"
-            target="_blank"
+            href="mailto:hakim.bhd@gmail.com"
             className="w-full flex items-center justify-center gap-x-4 md:w-auto px-6 py-2 text-primary-600 hover:text-white bg-white hover:bg-primary-600 border border-primary-600 hover:shadow-md rounded-md font-medium capitalize"
             onClick={() => contactLinkClickEvent('email_me')}
           >
