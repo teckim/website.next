@@ -2,13 +2,13 @@
 import { scrollEvent } from "../modules/ga";
 
 const testimonials = [
+  "/images/testimonial-1.png",
+  "/images/testimonial-7.png",
   "/images/testimonial-2.png",
   "/images/testimonial-3.png",
   "/images/testimonial-4.png",
   "/images/testimonial-5.png",
   "/images/testimonial-6.png",
-  "/images/testimonial-7.png",
-  "/images/testimonial-1.png",
 ];
 
 export default function Testimonials() {
@@ -21,14 +21,14 @@ export default function Testimonials() {
   return (
     <div className="container">
       <div className="text-center mt-16">
-        <h2 className="text-3xl font-semibold text-primary-500">
+        <h2 className="text-3xl font-semibold text-primary-500 uppercase tracking-wider">
           Testimonials
         </h2>
-        <p className="text-slate-600 text-sm">In Upwork and Fiverr</p>
+        <p className="text-slate-600 text-sm">Upwork and Fiverr clients</p>
       </div>
       <div className="flex flex-1 gap-x-8 snap-x overflow-x-auto py-16" onScroll={handleScroll} >
         {testimonials.map((testimonial) => (
-          <div key={testimonial} className="snap-start shrink-0 max-w-full border rounded-md p-4">
+          <div key={testimonial} className="snap-start shrink-0 max-w-full border rounded-md p-4 bg-white">
             <img
               className="rounded-md"
               src={testimonial}

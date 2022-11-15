@@ -22,7 +22,7 @@ export default function Home() {
         <title>Hakim&apos;s porfolio</title>
       </Head>
 
-      <header className="bg-white bg-hero-mobile md:bg-hero-desktop">
+      <header className="bg-white bg-hero-mobile md:bg-hero-desktop bg-no-repeat bg-contain bg-center">
         <Navbar />
         <Hero />
       </header>
@@ -34,18 +34,21 @@ export default function Home() {
             project={currentProject}
           />
         )}
-        <section id="testimonials" className="py-24">
+        <section id="testimonials" className="py-24 bg-slate-50">
           <Testimonials />
         </section>
         <section
           id="portfolio"
-          className="py-24 flex flex-col gap-y-8 bg-slate-50"
+          className="py-24 flex flex-col gap-y-8 bg-slate-100/80"
         >
           <div className="container">
             <div className="text-center my-16">
-              <h2 className="text-3xl font-semibold text-primary-500">
+              <h2 className="text-3xl font-semibold text-primary-500 uppercase tracking-wider">
                 Projects
               </h2>
+              <p className="text-slate-600 text-sm">
+                Commercial and Open Source
+              </p>
             </div>
             <div className="flex flex-col gap-y-8">
               {projects.map((project, idx) => (
@@ -64,7 +67,7 @@ export default function Home() {
       </main>
       <footer
         id="contact"
-        className="bg-primary-500 bg-footer-mobile md:bg-footer-desktop bg-no-repeat"
+        className="bg-primary-500 bg-footer-mobile md:bg-footer-desktop bg-no-repeat bg-contain bg-center"
       >
         <Footer />
       </footer>
