@@ -10,10 +10,10 @@ export default function Hero() {
           Glad to see you!
         </h1>
         <p className="text-slate-500 max-w-xl">
-          I’m a software developer! I can help you build a product, feature or
-          website. Look through some of my work and experience! If you like what
-          you see and have a project you need coded, don’t hestiate to contact
-          me.
+          An Upwork freelancer who has worked on a number of websites regarding
+          cryptocurrencies, vehicle leasing, event organizing, and other topics.
+          utilizing the most cutting-edge tools and technologies, like
+          TypeScript, Testing, Sass, and GraphQL.
         </p>
         <h2 className="text-primary-400">LET’S CONNECT</h2>
         <SocialStack />
