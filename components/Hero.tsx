@@ -9,7 +9,7 @@ export default function Hero() {
           I’m Hakim <br />
           Glad to see you!
         </h1>
-        <p className="text-slate-500">
+        <p className="text-slate-500 max-w-xl">
           I’m a software developer! I can help you build a product, feature or
           website. Look through some of my work and experience! If you like what
           you see and have a project you need coded, don’t hestiate to contact
