@@ -8,9 +8,9 @@ import { contactLinkClickEvent } from "../modules/ga";
 
 const socialAcounts = [
   {
-    name: "twitter",
-    icon: <TwitterIcon />,
-    link: "https://twitter.com/hakim_bhd",
+    name: "github",
+    icon: <GithubIcon />,
+    link: "https://github.com/teckim",
   },
   {
     name: "linkedin",
@@ -18,27 +18,27 @@ const socialAcounts = [
     link: "https://www.linkedin.com/in/hakim-bhd/",
   },
   {
-    name: "medium",
-    icon: <MediumIcon />,
-    link: "https://medium.com/@hakim.bhd",
-  },
-  {
-    name: "github",
-    icon: <GithubIcon />,
-    link: "https://github.com/teckim",
-  },
-  {
     name: "angel-list",
     icon: <AngelListIcon />,
     link: "https://angel.co/u/hakim-bhd",
+  },
+  {
+    name: "twitter",
+    icon: <TwitterIcon />,
+    link: "https://twitter.com/hakim_bhd",
+  },
+  {
+    name: "medium",
+    icon: <MediumIcon />,
+    link: "https://medium.com/@hakim.bhd",
   },
 ];
 
 export default function SocialStack() {
   return (
-    <ul className="flex items-center gap-x-4">
+    <ul className="flex items-center gap-x-1">
       {socialAcounts.map((account) => (
-        <li key={account.name}>
+        <li key={account.name} className="h-8 w-8 flex items-center justify-center hover:bg-primary-50 rounded-md">
           <Link href={account.link} target="_blank" onClick={() => contactLinkClickEvent(account.name)}>{account.icon}</Link>
         </li>
       ))}

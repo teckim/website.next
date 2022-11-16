@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Hakim&apos;s porfolio</title>
+        <title>Hakim - Software developer</title>
       </Head>
 
       <header className="bg-white bg-hero-mobile md:bg-hero-desktop bg-no-repeat bg-contain bg-center">

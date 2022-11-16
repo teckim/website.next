@@ -1,0 +1,4 @@
+Sitemap: https://hakim.vercel.app/sitemap.xml
+
+User-agent: *
+Allow: /*

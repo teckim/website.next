@@ -48,7 +48,7 @@ function Navbar() {
         <nav className="ml-auto hidden md:block">
           <ul className="px-4 flex gap-x-6 text-md text-slate-600 tracking-wide">
             {ROUTES.map(({ to, name }) => (
-              <li key={name}>
+              <li key={name} className="hover:text-primary-500">
                 <Link href={to}>
                   {name}
                 </Link>
