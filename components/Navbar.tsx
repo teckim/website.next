@@ -57,7 +57,7 @@ function Navbar() {
           </ul>
         </nav>
         <div>
-          <button className="md:hidden" type="button" onClick={openModal}>
+          <button className="md:hidden" type="button" aria-label="Hamburger menu" onClick={openModal}>
             <MenuIcon />
           </button>
         </div>

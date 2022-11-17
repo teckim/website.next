@@ -39,7 +39,7 @@ export default function SocialStack() {
     <ul className="flex items-center gap-x-1">
       {socialAcounts.map((account) => (
         <li key={account.name} className="h-8 w-8 flex items-center justify-center hover:bg-primary-50 rounded-md">
-          <Link href={account.link} target="_blank" onClick={() => contactLinkClickEvent(account.name)}>{account.icon}</Link>
+          <Link href={account.link} target="_blank" aria-label={account.name} onClick={() => contactLinkClickEvent(account.name)}>{account.icon}</Link>
         </li>
       ))}
     </ul>
