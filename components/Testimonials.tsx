@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+import Image from "next/image";
 import { scrollEvent } from "../modules/ga";
 
 const testimonials = [
@@ -28,9 +28,10 @@ export default function Testimonials() {
       </div>
       <div className="flex flex-1 gap-x-8 snap-x overflow-x-auto py-16" onScroll={handleScroll} >
         {testimonials.map((testimonial) => (
-          <div key={testimonial} className="snap-start shrink-0 max-w-full border rounded-md p-4 bg-white">
-            <img
-              className="rounded-md"
+          <div key={testimonial} className=" max-h-44 snap-start shrink-0 max-w-full border rounded-md p-4 bg-white">
+            <Image
+              width={500}
+              height={500}
               src={testimonial}
               alt={testimonial}
             />

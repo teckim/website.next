@@ -1,5 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
 import { Fragment } from "react";
+import Image from "next/image";
 import { Dialog, Transition } from "@headlessui/react";
 import CloseIcon from "../assets/icons/close-black.svg";
 import { IProject } from "../data/projects";
@@ -64,10 +64,12 @@ export default function ProjectModal({
                   </div>
                 </div>
                 <div className="bg-slate-50 rounded-md">
-                  <img
+                  <Image
                     className="w-full md:w-1/2 md:mx-auto rounded-md"
+                    width={800}
+                    height={800}
                     src={`/images/${project?.image}`}
-                    alt={project?.title}
+                    alt={project?.title || 'Project image'}
                   />
                 </div>
                 <div className="flex flex-col gap-y-2">

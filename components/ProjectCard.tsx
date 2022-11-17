@@ -1,5 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-
+import Image from "next/image";
 import { IProject } from "../data/projects";
 import { projectClickEvent } from "../modules/ga";
 import Features from "./Features";
@@ -19,10 +18,12 @@ export default function ProjectCard({ project, onClick }: ProjectCardProps) {
     <div className="bg-white p-4 rounded-md shadow-sm">
       <div className="flex flex-col md:grid grid-cols-2 gap-x-12 gap-y-6">
         <div className="bg-slate-50/50">
-          <img
+          <Image
             className="w-full rounded-md"
+            width={500}
+            height={500}
             src={`/images/${project.image}`}
-            alt={project.title}
+            alt={project.title || 'Project image'}
           />
         </div>
         <div className="flex flex-col gap-y-2">
